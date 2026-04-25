@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinium - Reasoning Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+        .blueprint-underline { position: relative; }
+        .blueprint-underline::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, #38BDF8 0%, transparent 100%);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen bg-white">
+        <!-- Sidebar -->
+        <aside class="w-64 h-screen bg-white border-r-2 border-[#1E3A8A] flex flex-col relative">
+            <div class="absolute right-4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#E2E8F0] to-transparent"></div>
+            
+            <!-- Logo -->
+            <div class="p-6 border-b-2 border-[#E2E8F0]">
+                <div class="flex items-center gap-2 blueprint-underline">
+                    <i data-lucide="brain" class="w-8 h-8 text-[#1E3A8A]" stroke-width="1.5"></i>
+                    <div>
+                        <span class="text-xl font-semibold text-[#0F172A]">Infinium</span>
+                        <p class="text-[10px] text-gray-500 mt-0.5">Knowledge AI</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 p-4 space-y-1">
+                <!-- Dashboard -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Dashboard</span>
+                    </button>
+                </div>
+                <!-- Query Interface -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="message-square" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Query Interface</span>
+                    </button>
+                </div>
+                <!-- Reasoning (Active) -->
+                <div class="relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-[#38BDF8] rounded-r"></div>
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 bg-[#1E3A8A] text-white border-l-2 border-[#38BDF8] rounded-sm">
+                        <i data-lucide="brain" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Reasoning</span>
+                    </button>
+                </div>
+                <!-- Decision History -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="clock" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Decision History</span>
+                    </button>
+                </div>
+                <!-- Error Insights -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="alert-triangle" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Error Insights</span>
+                    </button>
+                </div>
+                <!-- Knowledge Base -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="folder-open" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Knowledge Base</span>
+                    </button>
+                </div>
+                <!-- Analytics -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="line-chart" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Analytics</span>
+                    </button>
+                </div>
+                <!-- Data Sources -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="database" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Data Sources</span>
+                    </button>
+                </div>
+                <!-- Integrations -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="plug" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Integrations</span>
+                    </button>
+                </div>
+                <!-- Settings -->
+                <div class="relative">
+                    <button class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="settings" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Settings</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- User -->
+            <div class="p-4 border-t-2 border-[#E2E8F0]">
+                <div class="flex items-center gap-3 p-3 border-2 border-[#CBD5E1] rounded-sm">
+                    <div class="w-10 h-10 bg-[#1E3A8A] border-2 border-[#38BDF8] rounded-full flex items-center justify-center text-white font-semibold">
+                        DM
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-[#0F172A] text-sm font-medium truncate">Dev Manager</p>
+                        <p class="text-[#64748B] text-xs truncate">dev@company.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col relative w-full">
+            <!-- Header -->
+            <div class="h-16 border-b border-gray-200 bg-white flex items-center justify-between px-6">
+                <div class="flex items-center gap-2">
+                    <h1 class="text-lg font-semibold">Reasoning Engine</h1>
+                    <span class="px-2 py-0.5 bg-green-50 text-green-700 text-xs rounded-full border border-green-100 flex items-center gap-1">
+                        <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                        Online
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button class="p-2 hover:bg-gray-50 rounded-lg transition-colors text-gray-500 hover:text-gray-700">
+                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                    </button>
+                    <button class="p-2 hover:bg-gray-50 rounded-lg transition-colors text-gray-500 hover:text-gray-700">
+                        <i data-lucide="history" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Area (Empty State) -->
+            <div class="flex-1 overflow-y-auto p-6 space-y-8 bg-white flex flex-col justify-center items-center">
+                <div class="flex flex-col items-center justify-center -mt-10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                        <i data-lucide="brain" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-2">How can I help you understand code?</h2>
+                    <p class="text-gray-500 mb-8 max-w-md text-center">
+                        I can analyze your commits, documentation, and logic to explain the "why" behind your codebase.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 max-w-2xl w-full">
+                        <button class="p-4 bg-white border border-gray-200 rounded-xl hover:border-purple-300 hover:shadow-md transition-all text-left flex items-start gap-4 group">
+                            <div class="p-2 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                                <i data-lucide="git-commit" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900 group-hover:text-purple-700 transition-colors">Explain latest changes to auth</p>
+                                <p class="text-xs text-gray-500 mt-1">Tap to ask</p>
+                            </div>
+                        </button>
+                        <button class="p-4 bg-white border border-gray-200 rounded-xl hover:border-purple-300 hover:shadow-md transition-all text-left flex items-start gap-4 group">
+                            <div class="p-2 bg-red-50 rounded-lg group-hover:bg-red-100 transition-colors">
+                                <i data-lucide="alert-circle" class="w-5 h-5 text-red-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900 group-hover:text-purple-700 transition-colors">Debug recurring 500 errors</p>
+                                <p class="text-xs text-gray-500 mt-1">Tap to ask</p>
+                            </div>
+                        </button>
+                        <button class="p-4 bg-white border border-gray-200 rounded-xl hover:border-purple-300 hover:shadow-md transition-all text-left flex items-start gap-4 group">
+                            <div class="p-2 bg-green-50 rounded-lg group-hover:bg-green-100 transition-colors">
+                                <i data-lucide="file-code" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900 group-hover:text-purple-700 transition-colors">Document the payment module</p>
+                                <p class="text-xs text-gray-500 mt-1">Tap to ask</p>
+                            </div>
+                        </button>
+                        <button class="p-4 bg-white border border-gray-200 rounded-xl hover:border-purple-300 hover:shadow-md transition-all text-left flex items-start gap-4 group">
+                            <div class="p-2 bg-purple-50 rounded-lg group-hover:bg-purple-100 transition-colors">
+                                <i data-lucide="database" class="w-5 h-5 text-purple-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900 group-hover:text-purple-700 transition-colors">Connect new data source</p>
+                                <p class="text-xs text-gray-500 mt-1">Tap to ask</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-6 bg-white border-t border-gray-100">
+                <div class="max-w-4xl mx-auto relative">
+                    <div class="relative">
+                        <input
+                            type="text"
+                            placeholder="Ask about 'auth', 'database', or 'errors'..."
+                            class="w-full pl-6 pr-32 py-4 rounded-2xl border-2 border-gray-200 focus:border-purple-400 focus:outline-none focus:ring-4 focus:ring-purple-50 transition-all shadow-sm text-lg"
+                        />
+                        <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                            <div class="h-8 w-[1px] bg-gray-200"></div>
+                            <button
+                                class="p-2.5 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-all flex items-center justify-center"
+                            >
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1">
+                        <i data-lucide="sparkles" class="w-3 h-3"></i>
+                        Infinium reasons using real commits, logs, and docs
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

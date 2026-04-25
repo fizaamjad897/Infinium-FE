@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinium - Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .blueprint-underline {
+            position: relative;
+        }
+
+        .blueprint-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #38BDF8 0%, transparent 100%);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex h-screen bg-white">
+        <!-- Sidebar -->
+        <aside class="w-64 h-screen bg-white border-r-2 border-[#1E3A8A] flex flex-col relative">
+            <div
+                class="absolute right-4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#E2E8F0] to-transparent">
+            </div>
+
+            <!-- Logo -->
+            <div class="p-6 border-b-2 border-[#E2E8F0]">
+                <div class="flex items-center gap-2 blueprint-underline">
+                    <i data-lucide="brain" class="w-8 h-8 text-[#1E3A8A]" stroke-width="1.5"></i>
+                    <div>
+                        <span class="text-xl font-semibold text-[#0F172A]">Infinium</span>
+                        <p class="text-[10px] text-gray-500 mt-0.5">Knowledge AI</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 p-4 space-y-1">
+                <!-- Dashboard -->
+                <div class="relative">
+                    <button
+                        class="w-full justify-start gap-3 flex items-center px-4 py-2 text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFC] border-l-2 border-transparent transition-colors rounded-sm">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Dashboard</span>
+                    </button>
+                </div>
+                <!-- ... other items ... -->
+                <!-- Settings (Active) -->
+                <div class="relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-[#38BDF8] rounded-r"></div>
+                    <button
+                        class="w-full justify-start gap-3 flex items-center px-4 py-2 bg-[#1E3A8A] text-white border-l-2 border-[#38BDF8] rounded-sm">
+                        <i data-lucide="settings" class="w-5 h-5" stroke-width="1.5"></i>
+                        <span class="text-sm">Settings</span>
+                    </button>
+                </div>
+            </nav>
+            <!-- User -->
+            <div class="p-4 border-t-2 border-[#E2E8F0]">
+                <div class="flex items-center gap-3 p-3 border-2 border-[#CBD5E1] rounded-sm">
+                    <div
+                        class="w-10 h-10 bg-[#1E3A8A] border-2 border-[#38BDF8] rounded-full flex items-center justify-center text-white font-semibold">
+                        DM
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-[#0F172A] text-sm font-medium truncate">Dev Manager</p>
+                        <p class="text-[#64748B] text-xs truncate">dev@company.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <div class="border-b border-gray-200 bg-white px-8 py-6">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg">
+                        <i data-lucide="settings" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl">Settings</h1>
+                        <p class="text-gray-600 text-sm">Manage your account and preferences</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 overflow-hidden flex">
+                <!-- Tabs Sidebar -->
+                <div class="w-64 border-r border-gray-200 bg-gray-50 p-4">
+                    <div class="space-y-1">
+                        <button
+                            class="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white shadow-md transition-all">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                            <span class="font-medium">Profile</span>
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-white transition-all">
+                            <i data-lucide="bell" class="w-5 h-5"></i>
+                            <span class="font-medium">Notifications</span>
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-white transition-all">
+                            <i data-lucide="shield" class="w-5 h-5"></i>
+                            <span class="font-medium">Security</span>
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-white transition-all">
+                            <i data-lucide="key" class="w-5 h-5"></i>
+                            <span class="font-medium">API Keys</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="flex-1 overflow-y-auto p-8">
+                    <div class="max-w-3xl">
+                        <div class="space-y-6">
+                            <div>
+                                <h2 class="text-xl font-semibold mb-4">Profile Settings</h2>
+                                <p class="text-gray-600 mb-6">Manage your personal information</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                    <input type="text" value="John Doe"
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="text" value="john@example.com"
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Role</label>
+                                    <select
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none">
+                                        <option>Developer</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pt-8 border-t border-gray-200 mt-8">
+                                <button
+                                    class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg transition-all flex items-center gap-2">
+                                    <i data-lucide="save" class="w-5 h-5"></i>
+                                    Save Changes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
